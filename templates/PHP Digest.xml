@@ -1,0 +1,77 @@
+<templateSet group="PHP Digest">
+  <template name="lia" value="&lt;li&gt;&lt;a href=&quot;$LINK$&quot;&gt;$TEXT$&lt;/a&gt; — $DESCRIPTION$&lt;/li&gt;" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="LINK" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="TEXT" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="DESCRIPTION" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML" value="true" />
+    </context>
+  </template>
+  <template name="slia" value="&lt;li&gt;&lt;a href=&quot;$LINK$&quot;&gt;$TEXT$&lt;/a&gt; — $END$&lt;/li&gt;" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="LINK" expression="groovyScript(&quot;return _1.split('\t')[0]&quot;, SELECTION)" defaultValue="" alwaysStopAt="false" />
+    <variable name="TEXT" expression="groovyScript(&quot;return _1.split('\t')[1]&quot;, SELECTION)" defaultValue="" alwaysStopAt="false" />
+    <context>
+      <option name="HTML" value="true" />
+    </context>
+  </template>
+  <template name="liag" value="&lt;li&gt;&lt;a href=&quot;$LINK$&quot;&gt;$TEXT$&lt;/a&gt; — $DESCRIPTION$&lt;/li&gt;" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="LINK" expression="clipboard()" defaultValue="" alwaysStopAt="false" />
+    <variable name="TEXT" expression="groovyScript(&quot;return _1.replace('https://github.com/', '')&quot;, clipboard())" defaultValue="" alwaysStopAt="false" />
+    <variable name="DESCRIPTION" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML" value="true" />
+    </context>
+  </template>
+  <template name="ak" value="&lt;a href=&quot;$LINK$&quot;&gt;$SELECTION$&lt;/a&gt;$END$" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="LINK" expression="clipboard()" defaultValue="" alwaysStopAt="false" />
+    <context>
+      <option name="HTML" value="true" />
+    </context>
+  </template>
+  <template name="str" value="&lt;strong&gt;$SELECTION$&lt;/strong&gt;" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="HTML" value="true" />
+    </context>
+  </template>
+  <template name="pru" value="&lt;img alt=&quot;ru&quot; src=&quot;https://habrastorage.org/webt/v2/r1/ak/v2r1ake6qijxftbralm4knou9ck.png&quot; width=&quot;12&quot;/&gt; " description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="HTML" value="true" />
+    </context>
+  </template>
+  <template name="pha" value="&lt;img alt=&quot;habr&quot; src=&quot;https://habrastorage.org/webt/-u/wa/el/-uwael5b7b4s2zu-db-7p8iytxg.png&quot; width=&quot;12&quot;/&gt; " description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="HTML" value="true" />
+    </context>
+  </template>
+  <template name="pvi" value="&lt;img alt=&quot;video&quot; src=&quot;https://habrastorage.org/webt/qz/or/43/qzor43-o-hxqow_k8lsqlmniblm.png&quot; width=&quot;14&quot;&gt; " description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="HTML" value="true" />
+    </context>
+  </template>
+  <template name="pau" value="&lt;img alt=&quot;audio&quot; src=&quot;https://habrastorage.org/webt/d1/ma/lh/d1malhabo7kf3wgh3xm03mcgdim.png&quot; width=&quot;12&quot;/&gt; " description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="HTML" value="true" />
+    </context>
+  </template>
+  <template name="splr" value="&lt;spoiler&gt;&lt;source lang=&quot;php&quot;&gt;$SELECTION$$END$&lt;/source&gt;&lt;/spoiler&gt;" description="Spoiler and source for habr" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="HTML_TEXT" value="true" />
+    </context>
+  </template>
+  <template name="sphp" value="&lt;source lang=&quot;php&quot;&gt;&#10;$END$&#10;&lt;/source&gt;" description="PHP Source  tag for Habr" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="HTML_TEXT" value="true" />
+    </context>
+  </template>
+  <template name="л" value="&lt;a href=&quot;$LINK$&quot;&gt;$SELECTION$&lt;/a&gt;$END$" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="LINK" expression="clipboard()" defaultValue="" alwaysStopAt="false" />
+    <context>
+      <option name="HTML" value="true" />
+    </context>
+  </template>
+  <template name="ar" value="&lt;anchor&gt;$END$&lt;/anchor&gt;" description="&lt;anchor&gt;&lt;/anchor&gt;" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="HTML_TEXT" value="true" />
+    </context>
+  </template>
+</templateSet>
